@@ -97,5 +97,31 @@
     </div>
     <p>Powered by Nana!</p>
   </footer>
+
+  <script>
+    const studyItems = document.querySelectorAll("#studies ul li");
+  
+    const observerOptions = {
+      root: null,
+      threshold: 0.1
+    };
+  
+    const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, observerOptions);
+  
+    studyItems.forEach(item => {
+      fadeInOnScroll.observe(item);
+    });
+  </script>
+  
 </body>
+
+
 </html>
