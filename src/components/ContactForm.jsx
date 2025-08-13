@@ -1,4 +1,3 @@
-import Button from "./Button";
 import { useState } from "react";
 
 const ContactForm = () => {
@@ -44,7 +43,7 @@ const ContactForm = () => {
           onChange={handleFormInput}
           placeholder="Your message"
         />
-        <Button text={"Submit!"} />
+        <button type="submit">Submit!</button>
       </form>
     </>
   );

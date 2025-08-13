@@ -37,9 +37,7 @@ const About = () => {
           I'm available for freelance work, collaborations, or full-time
           opportunies. Let's bring your project to life!
         </p>
-        <Link to={"/contact"}>
-          <Button text={"Contact Me"} />
-        </Link>
+        <Button text={"Contact Me"} />
       </div>
     </>
   );

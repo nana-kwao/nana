@@ -11,9 +11,7 @@ const Home = () => {
           A Passionate full-stack javascript web developer with a drive to build
           impactful solutions
         </p>
-        <Link to="/contact">
-          <Button text={"Hire Me!"} />
-        </Link>
+        <Button text={"Hire Me!"} />
       </div>
     </>
   );

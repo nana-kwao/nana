@@ -1,9 +1,11 @@
 const Button = ({ text }) => {
   return (
     <>
-      <div>
-        <button type="button">{text}</button>
-      </div>
+      <a href="#contact">
+        <div>
+          <button type="button">{text}</button>
+        </div>
+      </a>
     </>
   );
 };
