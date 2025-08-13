@@ -17,31 +17,34 @@ const ContactForm = () => {
 
   const sendEmail = async () => {
     try {
-      const response = await fetch("/api/sendemailtoadmin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formInput),
-      });
+      const response = await fetch(
+        "https://mycvserver.onrender.com/api/sendemail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formInput),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to send email");
       }
       return await response.json();
     } catch (error) {
-      console.error("Error sending email:", error);
+      return `Error sending email: ${error}`;
     }
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       let res = await sendEmail();
-      console.log("Email sent successfully:", res);
-      setFormInput({ name: "", email: "", message: "" }); 
+      setFormInput({ name: "", email: "", message: "" });
+      return res;
     } catch (error) {
-      console.error("Error in form submission:", error);
+      return `Error in form submission: ${error}`;
     }
   };
 
