@@ -15,9 +15,39 @@ const ContactForm = () => {
     }));
   };
 
+  const sendEmail = async () => {
+    try {
+      const response = await fetch("/api/sendemailtoadmin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formInput),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      let res = await sendEmail();
+      console.log("Email sent successfully:", res);
+      setFormInput({ name: "", email: "", message: "" }); 
+    } catch (error) {
+      console.error("Error in form submission:", error);
+    }
+  };
+
   return (
     <>
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"

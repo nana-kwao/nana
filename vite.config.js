@@ -11,4 +11,13 @@ if (!globalThis.crypto) {
 export default defineConfig({
   plugins: [react()],
   base: "/nana",
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://mycvserver.onrender.com:3000",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
