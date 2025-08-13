@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://mycvserver.onrender.com:3000",
+        target: "https://mycvserver.onrender.com:10000",
         changeOrigin: true,
         secure: false,
       },
