@@ -24,16 +24,16 @@ jobs:
         with:
           node-version: "16"
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Build project
         run: npm run build
+
+      - name: Deploy project
+        run: npm run deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages
+          publish_branch: dev
           cname: nana-kwao.github.io
