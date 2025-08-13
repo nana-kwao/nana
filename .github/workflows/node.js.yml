@@ -28,13 +28,12 @@ jobs:
         
       - name: Build project
         run: npm run build
+        env:
+          VITE_BASE: "/nana"
 
       - name: Add user information for github actions
         run: git config --global user.name "nana-kwao"
       - run: git config --global user.email "nanakwaofreiku@outlook.com"
-
-      - name: Deploy project
-        run: npm run deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
