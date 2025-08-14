@@ -8,8 +8,8 @@ const Contact = () => {
         <ContactForm />
         <div className="social-links">
           <a href={"https://facebook.com/f.nanakwao"}>Facebook</a>
-          <a href={"https://facebook.com/f.nanakwao"}>WhatsApp</a>
-          <a href={"https://facebook.com/f.nanakwao"}>Twitter(X)</a>
+          <a href={"https://wa.me/+233559082614"}>WhatsApp</a>
+          <a href={"https://x.com/f_nanakwao"}>Twitter(X)</a>
         </div>
         <p className="attribution">
           Powered by <i>f.nanakwao</i>
