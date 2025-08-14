@@ -23,7 +23,7 @@ const About = () => {
           </p>
         </div>
         <div className="mission">
-          <h3>My Vission</h3>
+          <h3>My Vision</h3>
           <p>
             To become a globally recognized web developer and tech innovator
             delivering quality and sustainable solutions.
