@@ -9,10 +9,7 @@ import {
 const About = () => {
   return (
     <>
-      <AuthBackgroundWrapperDiv
-        id="about"
-        style={{ display: "flex", gap: "1em" }}
-      >
+      <AuthBackgroundWrapperDiv>
         <CourseCardChild>
           <CourseTitle>Why Hire Me</CourseTitle>
           <AuthWelcomeText>

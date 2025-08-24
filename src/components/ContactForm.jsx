@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { InputFieldWrapper, LoginForm, Button } from "milesuicomponents";
 
 const ContactForm = () => {
   const [formInput, setFormInput] = useState({
@@ -50,34 +51,43 @@ const ContactForm = () => {
 
   return (
     <>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={formInput.name}
-          onChange={handleFormInput}
-          required
-          placeholder="Your name"
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formInput.email}
-          onChange={handleFormInput}
-          required
-          placeholder="Your email"
-        />
-        <textarea
-          name="message"
-          id="message"
-          value={formInput.message}
-          onChange={handleFormInput}
-          placeholder="Your message"
-        />
-        <button type="submit">Submit!</button>
-      </form>
+      <LoginForm onSubmit={handleSubmit}>
+        <InputFieldWrapper>
+          <i className="fa fa-person icon" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formInput.name}
+            onChange={handleFormInput}
+            required
+            placeholder="Your name"
+          />
+        </InputFieldWrapper>
+        <InputFieldWrapper>
+          <i className="fa fa-envelope icon" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formInput.email}
+            onChange={handleFormInput}
+            required
+            placeholder="Your email"
+          />
+        </InputFieldWrapper>
+        <InputFieldWrapper>
+        <i className="fa fa-comments icon"/>
+          <textarea
+            name="message"
+            id="message"
+            value={formInput.message}
+            onChange={handleFormInput}
+            placeholder="Your message"
+          />
+        </InputFieldWrapper>
+        <Button type="submit">Submit!</Button>
+      </LoginForm>
     </>
   );
 };
