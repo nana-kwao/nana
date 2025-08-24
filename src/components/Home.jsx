@@ -1,17 +1,25 @@
-import Button from "./Button";
+import {
+  CourseTitle,
+  SubjectHeading,
+  AuthWelcomeText,
+  AuthBackgroundWrapperDiv,
+} from "milesuicomponents";
 
 const Home = () => {
   return (
     <>
-      <div id="home" className="home-area">
-        <h2>Welcome to my Resume Website</h2>
-        <h2>I'm Freiku Nana Kwao</h2>
-        <p>
+      <AuthBackgroundWrapperDiv id="home" className="home-area">
+        <CourseTitle style={{ fontSize: "28px" }}>
+          Welcome to my Resume Website
+        </CourseTitle>
+        <SubjectHeading style={{ fontSize: "20px" }}>
+          I'm Freiku Nana Kwao
+        </SubjectHeading>
+        <AuthWelcomeText>
           A Passionate full-stack javascript web developer with a drive to build
           impactful solutions
-        </p>
-        <Button text={"Hire Me!"} />
-      </div>
+        </AuthWelcomeText>
+      </AuthBackgroundWrapperDiv>
     </>
   );
 };

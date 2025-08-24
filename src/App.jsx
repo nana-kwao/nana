@@ -5,6 +5,7 @@ import Studies from "./components/Studies";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
+
 function App() {
   return (
     <>

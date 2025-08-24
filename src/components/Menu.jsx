@@ -1,23 +1,23 @@
-import Button from "./Button";
+import { Button, IconsWithText, MenuBarUl } from "milesuicomponents";
 
 const Menu = () => {
   return (
     <>
-      <div className="menu-area">
-        <a href="#home">
-          <li>Home</li>
+      <MenuBarUl className="menubar">
+        <a href="#home" className="menu-li">
+          <IconsWithText><i className="fa fa-home"/>{" "}Home</IconsWithText>
         </a>
-        <a href="#studies">
-          <li>Studies</li>
+        <a href="#studies" className="menu-li">
+          <IconsWithText><i className="fa fa-book"/>{" "}Studies</IconsWithText>
         </a>
-        <a href="#about">
-          <li>About</li>
+        <a href="#about" className="menu-li">
+          <IconsWithText><i className="fa fa-id-card"/>{" "}About</IconsWithText>
         </a>
-        <a href="#contact">
-          <li>Contact</li>
+        <a href="#contact" className="menu-li">
+         <Button>Contact Me</Button>
         </a>
-        <Button text={"Hire Me"} />
-      </div>
+        
+      </MenuBarUl>
     </>
   );
 };
