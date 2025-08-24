@@ -10,7 +10,7 @@ if (!globalThis.crypto) {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "/nana/",
   server: {
     proxy: {
       "/api": {
