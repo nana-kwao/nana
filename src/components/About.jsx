@@ -31,19 +31,11 @@ const About = () => {
           <AuthWelcomeText>
             To build innovative and accessible digital solutions that improve
             lives and empower businesses to grow online
-<<<<<<< HEAD
-          </p>
-        </div>
-        <div className="mission">
-          <h3>My Vision</h3>
-          <p>
-=======
           </AuthWelcomeText>
         </CourseCardChild>
         <CourseCardChild>
           <CourseTitle>My Vission</CourseTitle>
           <AuthWelcomeText>
->>>>>>> 3812785 (updated the menu bar)
             To become a globally recognized web developer and tech innovator
             delivering quality and sustainable solutions.
           </AuthWelcomeText>
