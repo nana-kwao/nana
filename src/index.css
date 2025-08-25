@@ -16,6 +16,12 @@ a {
 .li:hover {
   border-left: 0.4em solid #fff !important;
 }
+.authentication-background {
+  background-image: url("/public/bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (min-width: 768px) {
   .menubar {
     flex-direction: row !important;
@@ -25,5 +31,8 @@ a {
   }
   .menu-li {
     width: 100px;
+  }
+  .authentication-background {
+    background-image: url("/public/bg-desktop.jpg");
   }
 }
