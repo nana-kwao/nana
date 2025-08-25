@@ -3,11 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
   scroll-behavior: smooth;
+  color: #213547;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color:
 }
 a {
   text-decoration: none;
@@ -17,7 +19,7 @@ a {
   border-left: 0.4em solid #fff !important;
 }
 .authentication-background {
-  background-image: url("/public/bg-mobile.jpg");
+  background-image: url("/bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -33,6 +35,6 @@ a {
     width: 100px;
   }
   .authentication-background {
-    background-image: url("/public/bg-desktop.jpg");
+    background-image: url("/bg-desktop.jpg");
   }
 }
