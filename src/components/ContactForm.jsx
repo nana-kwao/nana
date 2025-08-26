@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { InputFieldWrapper, LoginForm, Button } from "milesuicomponents";
+import {
+  InputFieldWrapper,
+  LoginForm,
+  Button,
+  ResponseStatus,
+} from "milesuicomponents";
 
 const ContactForm = () => {
   const [formInput, setFormInput] = useState({
@@ -7,6 +12,7 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [toast, setToast] = useState(false);
 
   const handleFormInput = (event) => {
     const { name, value } = event.target;
@@ -43,7 +49,13 @@ const ContactForm = () => {
     try {
       let res = await sendEmail();
       setFormInput({ name: "", email: "", message: "" });
-      return res;
+      if (res === "Email sent successfully") {
+        setToast(true);
+        setTimeout(() => {
+          setToast(false);
+        }, 3000);
+      }
+      console.log(res);
     } catch (error) {
       return `Error in form submission: ${error}`;
     }
@@ -77,7 +89,7 @@ const ContactForm = () => {
           />
         </InputFieldWrapper>
         <InputFieldWrapper>
-        <i className="fa fa-comments icon"/>
+          <i className="fa fa-comments icon" />
           <textarea
             name="message"
             id="message"
@@ -88,6 +100,19 @@ const ContactForm = () => {
         </InputFieldWrapper>
         <Button type="submit">Submit!</Button>
       </LoginForm>
+
+      {toast && (
+        <ResponseStatus
+          style={{
+            color: "#213547",
+            textAlign: "center",
+            padding: "0.3em 0",
+            borderLeft: "0.3em solid green",
+          }}
+        >
+          Email Sent Successfully
+        </ResponseStatus>
+      )}
     </>
   );
 };
