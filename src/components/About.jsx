@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <AuthBackgroundWrapperDiv
-        style={{ textAlign: "center", padding: "2rem" }}
+        style={{ textAlign: "center", padding: "1rem" }}
       >
         <CourseTitle style={{ borderBottom: "none" }}>Why Hire Me</CourseTitle>
         <AuthWelcomeText>
@@ -25,7 +25,7 @@ const About = () => {
         </AuthWelcomeText>
       </AuthBackgroundWrapperDiv>
       <AuthBackgroundWrapperDiv
-        style={{ textAlign: "center", padding: "2rem" }}
+        style={{ textAlign: "center", padding: "1rem" }}
       >
         <CourseTitle style={{ borderBottom: "none" }}>My Mission</CourseTitle>
         <AuthWelcomeText>
@@ -39,12 +39,12 @@ const About = () => {
         </AuthWelcomeText>
       </AuthBackgroundWrapperDiv>
       <AuthBackgroundWrapperDiv
-        style={{ textAlign: "center", padding: "2rem" }}
+        style={{ textAlign: "center", padding: "1rem" }}
       >
         <CourseTitle style={{ borderBottom: "none" }}>
           Let's Work Together
         </CourseTitle>
-        <AuthWelcomeText>
+        <AuthWelcomeText style={{ marginBottom: "1em" }}>
           I'm available for freelance work, collaborations, or full-time
           opportunies. Let's bring your project to life!
         </AuthWelcomeText>

@@ -1,4 +1,4 @@
-import { AssignmentCard } from "milesuicomponents";
+import { AssignmentCard, CourseTitle } from "milesuicomponents";
 
 const studiesList = [
   { study: "HyperText Markup Language", color: "blue" },
@@ -18,7 +18,7 @@ const studiesList = [
   { study: "Database Management", color: "gray" },
   { study: "Software Engineering", color: "purple" },
   { study: "OOP- Object Oriented Programming", color: "red" },
-  { study: "Agiles Development", color: "lemon" },
+  { study: "Agiles Development", color: "orange" },
   { study: "Resource Management", color: "brown" },
   { study: "Problem Solving", color: "coral" },
 ];
@@ -26,9 +26,27 @@ const studiesList = [
 const Studies = () => {
   return (
     <>
-      <div>
+      <CourseTitle style={{ textAlign: "center" }}>Skills</CourseTitle>
+      <div
+        className="studies-li"
+        style={{
+          display: "grid",
+          justifyItems: "center",
+          backgroundColor: "#fff",
+        }}
+      >
         {studiesList.map((study, idx) => (
-          <AssignmentCard key={idx}>{study.study}</AssignmentCard>
+          <AssignmentCard
+            style={{
+              border: "none",
+              borderBottom: `0.2em solid ${study.color}`,
+              padding: "1em 0.5em",
+              margin: "1rem 0",
+            }}
+            key={idx}
+          >
+            {study.study}
+          </AssignmentCard>
         ))}
       </div>
     </>

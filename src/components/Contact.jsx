@@ -1,20 +1,43 @@
 import ContactForm from "./ContactForm";
+import {
+  SubjectHeading,
+  AuthBackGroundWrapper,
+  Attribution,
+  IconsWithText,
+} from "milesuicomponents";
 
 const Contact = () => {
   return (
     <>
-      <div className="footer-area" id="contact">
-        <h3>Contact Me</h3>
+      <AuthBackGroundWrapper
+        id="contact"
+        style={{ background: "none", paddingTop: "1rem", height: "auto" }}
+      >
+        <SubjectHeading style={{ textAlign: "center" }}>
+          Contact Me
+        </SubjectHeading>
         <ContactForm />
-        <div className="social-links">
-          <a href={"https://facebook.com/f.nanakwao"}>Facebook</a>
-          <a href={"https://wa.me/+233559082614"}>WhatsApp</a>
-          <a href={"https://x.com/f_nanakwao"}>Twitter(X)</a>
+        <div style={{ margin: "1em 0", display: "flex", gap: "2em" }}>
+          <a
+            href={"https://facebook.com/f.nanakwao"}
+            style={{ color: "#213547" }}
+          >
+            facebook
+          </a>
+          <a href={"https://wa.me/+233559082614"} style={{ color: "#213547" }}>
+            whatsApp
+          </a>
+          <a
+            href={"https://x.com/f_nanakwao"}
+            style={{ color: "#213547", marginBottom: "1em" }}
+          >
+            x
+          </a>
         </div>
-        <p className="attribution">
-          Powered by <i>f.nanakwao</i>
-        </p>
-      </div>
+        <Attribution className="attribution">
+          Powered by <a href="https://x.com/f_nanakwao">f.nanakwao</a>
+        </Attribution>
+      </AuthBackGroundWrapper>
     </>
   );
 };

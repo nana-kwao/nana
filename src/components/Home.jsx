@@ -12,9 +12,10 @@ import cv from "../assets/f_nanakwao_cv.pdf";
 const Home = () => {
   return (
     <>
-      <AuthBackground>
+      <AuthBackground style={{ height: "500px" }}>
         <AuthBackGroundWrapper
           style={{
+            height: "100%",
             background: "linear-gradient(to top, #fff 40%, transparent 100%)",
           }}
         >

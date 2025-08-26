@@ -23,6 +23,10 @@ a {
   background-size: cover;
 }
 
+.studies-li {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 @media screen and (min-width: 768px) {
   .menubar {
     flex-direction: row !important;
@@ -32,6 +36,9 @@ a {
   }
   .menu-li {
     width: 100px;
+  }
+  .studies-li{
+    grid-template-columns: repeat(3, 1fr);
   }
   .authentication-background {
     background-image: url("./assets/bg-desktop.jpg");
