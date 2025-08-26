@@ -49,7 +49,7 @@ const ContactForm = () => {
     try {
       let res = await sendEmail();
       setFormInput({ name: "", email: "", message: "" });
-      if (res === "Email sent successfully") {
+      if (res.message === "Email sent successfully") {
         setToast(true);
         setTimeout(() => {
           setToast(false);
