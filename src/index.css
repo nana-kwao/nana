@@ -18,7 +18,7 @@ a {
   border-left: 0.4em solid #fff !important;
 }
 .authentication-background {
-  background-image: url("/bg-mobile.png");
+  background-image: url("./assets/bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -34,6 +34,8 @@ a {
     width: 100px;
   }
   .authentication-background {
-    background-image: url("/bg-desktop.jpg");
+    background-image: url("./assets/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
