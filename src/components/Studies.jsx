@@ -23,7 +23,6 @@ const studiesList = [
   { study: "Problem Solving", color: "coral" },
 ];
 
-const red = "red";
 const Studies = () => {
   return (
     <>
