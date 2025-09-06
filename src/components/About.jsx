@@ -10,6 +10,7 @@ const About = () => {
   return (
     <>
       <AuthBackgroundWrapperDiv
+        id="about"
         style={{ textAlign: "center", padding: "1rem" }}
       >
         <CourseTitle style={{ borderBottom: "none" }}>Why Hire Me</CourseTitle>
