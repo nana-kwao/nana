@@ -26,7 +26,7 @@ const studiesList = [
 const Studies = () => {
   return (
     <>
-      <CourseTitle style={{ textAlign: "center" }}>Skills</CourseTitle>
+      <CourseTitle style={{ textAlign: "center" }} id="studies" >Skills</CourseTitle>
       <div
         className="studies-li"
         style={{
